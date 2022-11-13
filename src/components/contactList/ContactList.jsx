@@ -1,15 +1,16 @@
 import React from 'react'
-import user from '../assets/user.png'
+import user from '../../assets/user.png'
 import { AiFillDelete } from 'react-icons/ai';
 import { FiEdit } from 'react-icons/fi';
-import { DeleteUser, useFetch } from '../firebase/firebasefunction';
+import { DeleteUser, useFetch } from '../../firebase/firebasefunction';
+import NoData from '../NoData/NoData';
 
 const ContactList = ({editUpdateUser}) => {
   const {contactList, loading}=useFetch()
   return (
     <div> 
       {
-        loading ? "loding" : contactList?.length===0 ? "no data" : contactList?.map((item)=>
+        loading ? "loding" : contactList?.length===0 ? (<NoData/>) : contactList?.map((item)=>
         <div className="list-group w-auto" key={item.id}>
         <div className="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
           <img src={user} alt="twbs" width={40} height={40} className="rounded-circle flex-shrink-0" />

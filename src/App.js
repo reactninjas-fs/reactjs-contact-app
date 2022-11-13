@@ -2,7 +2,7 @@ import "./App.css";
 import ContactForm from "./contactForm/ContactForm";
 import {useState} from 'react'
 import { AddUser, UpdateUser } from "./firebase/firebasefunction";
-import ContactList from "./contactList/ContactList";
+import ContactList from "./components/contactList/ContactList";
 
 const initialValues = {username:"", phoneNumber:"", gender:""}
 
