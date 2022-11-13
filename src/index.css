@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 .App {
+    font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -7,3 +9,30 @@
     background-position: center center;
     width: 100%;
 } 
+.App .text-bg-dark{
+    background-color: #b7672ac4 !important;
+    color: #f9efd4 !important; 
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px !important;
+}
+.App label {
+    font-size: 18px;
+}
+.App input {
+    background-color: #f9efd4;
+    font-size: 14px;
+}
+.App select {
+    margin-top: 2rem;
+    background-color: #f9efd4;
+}
+.btn-outline-light {
+    color: #f9efd4 !important;
+    border: none !important;
+    background-color: #b7662a !important;
+    transition: all 1s;
+}
+.btn-outline-light:hover {
+    color: #f9efd4 !important;
+    background-color: #b7672ab5 !important;
+    border: none !important;
+}

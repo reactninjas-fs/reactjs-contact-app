@@ -24,7 +24,7 @@ const handleChange = (e) => {
         <option value="male">Male</option>
         <option value="other">Other</option>
       </select>
-    <button type="submit" className="btn btn btn-outline-light mt-3">Submit</button>
+    <button type="submit" className="btn btn btn-outline-light w-100 mt-3">Submit</button>
   </form>
   )
 }
