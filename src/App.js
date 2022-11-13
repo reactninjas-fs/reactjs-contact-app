@@ -1,7 +1,7 @@
 import "./App.css";
 import ContactForm from "./contactForm/ContactForm";
 import {useState} from 'react'
-import { AddUser } from "./firebase/firebasefunction";
+import { AddUser, UpdateUser } from "./firebase/firebasefunction";
 import ContactList from "./contactList/ContactList";
 
 const initialValues = {username:"", phoneNumber:"", gender:""}
@@ -10,8 +10,16 @@ function App() {
   const [info, setInfo] = useState(initialValues)
 
   const handleSubmit=(e)=>{
-    e.preventDefault()
-    AddUser(info)
+    e.preventDefault() 
+    if(info.id){
+      UpdateUser(info) 
+    }else{
+      AddUser(info) 
+    }
+     setInfo(initialValues)    
+  }
+  const editUser=(id,username,phoneNumber,gender)=>{
+    setInfo({id,username,phoneNumber,gender})
   }
 
   return (
@@ -29,7 +37,7 @@ function App() {
         <div className="col-md-6 mb-2">
           <div className="h-100 p-5 bg-light border rounded-3">
             <h2>Contact List</h2>
-            <ContactList />
+            <ContactList editUser={editUser}/>
           </div>
         </div>
 

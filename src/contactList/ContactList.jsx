@@ -4,7 +4,7 @@ import { AiFillDelete } from 'react-icons/ai';
 import { FiEdit } from 'react-icons/fi';
 import { DeleteUser, useFetch } from '../firebase/firebasefunction';
 
-const ContactList = () => {
+const ContactList = ({editUser}) => {
   const {contactList, loading}=useFetch()
   return (
     <div> 
@@ -21,7 +21,7 @@ const ContactList = () => {
             </div>
             <small className="opacity-50 text-nowrap">
               <AiFillDelete onClick={()=>DeleteUser(item.id)} className='mx-1'/>
-              <FiEdit className='mx-1'/>
+              <FiEdit onClick={()=>editUser(item.id,item.username,item.phoneNumber,item.gender)} className='mx-1'/>
             </small>
           </div>
         </div>
