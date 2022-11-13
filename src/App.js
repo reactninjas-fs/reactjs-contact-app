@@ -1,6 +1,12 @@
 import "./App.css";
+import ContactForm from "./contactForm/ContactForm";
+import {useState} from 'react'
+
+const initialValues = {username:"", phoneNumber:"", gender:""}
 
 function App() {
+  const [info, setInfo] = useState(initialValues)
+
   return (
     <div className="App"> 
     <div className="container">
@@ -9,12 +15,7 @@ function App() {
         <div className="col-md-6 mb-2">
           <div className="h-100 p-5 text-bg-dark rounded-3">
             <h2>Add Contact</h2>
-            <p>
-              
-            </p>
-            <button className="btn btn-outline-light" type="button">
-              Example button
-            </button>
+              <ContactForm info={info} setInfo={setInfo}/> 
           </div>
         </div>
 
