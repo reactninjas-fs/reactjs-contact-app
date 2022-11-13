@@ -27,14 +27,14 @@ function App() {
     <div className="container">
       <div className="row align-items-md-stretch">
 
-        <div className="col-md-6 mb-2">
+        <div className="col-md-6 mb-3">
           <div className="h-100 p-5 text-bg-dark rounded-3">
             <h2>Add Contact</h2>
               <ContactForm info={info} setInfo={setInfo} handleSubmit={handleSubmit}/> 
           </div>
         </div>
 
-        <div className="col-md-6 mb-2">
+        <div className="col-md-6 mb-3">
           <div className="h-100 p-5 bg-light border rounded-3">
             <h2>Contact List</h2>
             <ContactList editUser={editUser}/>

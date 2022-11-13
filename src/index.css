@@ -21,8 +21,11 @@
     background-color: #f9efd4;
     font-size: 14px;
 }
-.App select {
-    margin-top: 2rem;
+.App h2 {
+    border-bottom: 1px solid;
+    margin: 20px 0 30px 0;
+}
+.App select { 
     background-color: #f9efd4;
 }
 .btn-outline-light {
@@ -35,4 +38,21 @@
     color: #f9efd4 !important;
     background-color: #b7672ab5 !important;
     border: none !important;
+}
+.App .bg-light{
+    color: #b7662a !important;
+    background-color: #f9efd4ab !important;
+    border: none !important;
+}
+.App .list-group-item {
+    background-color: #f9efd4 !important;
+    border: none !important;
+    margin-bottom: 20px;
+}
+.App .list-group-item h6 {  
+    color: #b7662a !important;
+    margin-bottom: 8px !important;
+}
+.App .list-group-item p {  
+    font-size: 13px !important;
 }
