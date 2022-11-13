@@ -2,7 +2,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
     <div className="container">
       <div className="row align-items-md-stretch">
 
@@ -31,8 +31,8 @@ function App() {
         </div>
 
       </div>
-    </div>
-    </div>
+      </div>
+    </div> 
   );
 }
 
