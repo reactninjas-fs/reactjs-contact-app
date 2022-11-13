@@ -38,7 +38,7 @@
     color: #f9efd4 !important;
     background-color: #b7672ab5 !important;
     border: none !important;
-}
+} 
 .App .bg-light{
     color: #b7662a !important;
     background-color: #f9efd4ab !important;
@@ -47,7 +47,7 @@
 .App .list-group-item {
     background-color: #f9efd4 !important;
     border: none !important;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 .App .list-group-item h6 {  
     color: #b7662a !important;
