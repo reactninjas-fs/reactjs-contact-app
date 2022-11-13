@@ -2,7 +2,7 @@ import React from 'react'
 import user from '../assets/user.png'
 import { AiFillDelete } from 'react-icons/ai';
 import { FiEdit } from 'react-icons/fi';
-import { useFetch } from '../firebase/firebasefunction';
+import { DeleteUser, useFetch } from '../firebase/firebasefunction';
 
 const ContactList = () => {
   const {contactList, loading}=useFetch()
@@ -19,7 +19,10 @@ const ContactList = () => {
               <p className="mb-0 opacity-75">Phone Number: {item.phoneNumber} </p>
               <p className="mb-0 opacity-75">Gender: {item.gender}</p>
             </div>
-            <small className="opacity-50 text-nowrap"><AiFillDelete className='mx-1'/><FiEdit className='mx-1'/></small>
+            <small className="opacity-50 text-nowrap">
+              <AiFillDelete onClick={()=>DeleteUser(item.id)} className='mx-1'/>
+              <FiEdit className='mx-1'/>
+            </small>
           </div>
         </div>
       </div>

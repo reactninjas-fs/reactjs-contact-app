@@ -1,4 +1,4 @@
-import { getDatabase, ref, push, set, onValue} from "firebase/database";
+import { getDatabase, ref, push, set, onValue, remove} from "firebase/database";
 import firebase from "./config";
 import {useState, useEffect} from 'react'
 
@@ -32,4 +32,10 @@ export const useFetch=()=>{
       })
     }, [])
     return {contactList, loading}
+}
+
+//data silme
+export const DeleteUser=(id)=>{
+    const db=getDatabase(firebase); 
+      remove(ref(db,"users/"+id))
 }
