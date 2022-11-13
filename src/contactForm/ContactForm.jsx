@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactForm = ({setInfo, info}) => {
+const ContactForm = ({setInfo, info, handleSubmit}) => {
 const handleChange = (e) => {
     e.preventDefault()
     // const name = e.target.name;
@@ -10,7 +10,7 @@ const handleChange = (e) => {
     setInfo({...info, [name]: value})
 }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
     <div className="mb-3">
       <label htmlFor="username" className="form-label">Username</label>
       <input onChange={handleChange} value={info.username} name="username" type="text" className="form-control" id="username" />
@@ -20,9 +20,9 @@ const handleChange = (e) => {
       <input onChange={handleChange} value={info.phoneNumber} name="phoneNumber" type="text" className="form-control" id="phoneNumber" />
     </div>
     <select onChange={handleChange} value={info.gender} name="gender" className="form-select"> 
-        <option value={1}>Female</option>
-        <option value={2}>Male</option>
-        <option value={3}>Other</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option>
       </select>
     <button type="submit" className="btn btn btn-outline-light mt-3">Submit</button>
   </form>
