@@ -41,9 +41,9 @@ export const DeleteUser=(id)=>{
 }
 
 //data edit
-export const UpdateUser=(info)=>{
-    const db=getDatabase(firebase);
-    const updates={};
-    updates["/users"+info.id]=info
-    return update(ref(db), updates)
-}
+export const UpdateUser = (info) => {
+    const db = getDatabase();
+    const updates = {};
+    updates["users/" + info.id] = info;
+    return update(ref(db), updates);
+  };

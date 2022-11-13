@@ -13,13 +13,14 @@ function App() {
     e.preventDefault() 
     if(info.id){
       UpdateUser(info) 
+      console.log("updated")
     }else{
       AddUser(info) 
     }
      setInfo(initialValues)    
   }
-  const editUser=(id,username,phoneNumber,gender)=>{
-    setInfo({id,username,phoneNumber,gender})
+  const editUpdateUser=(id, username, phoneNumber, gender)=>{
+    setInfo({id, username, phoneNumber, gender})
   }
 
   return (
@@ -37,7 +38,7 @@ function App() {
         <div className="col-md-6 mb-3">
           <div className="h-100 p-5 bg-light border rounded-3">
             <h2>Contact List</h2>
-            <ContactList editUser={editUser}/>
+            <ContactList editUpdateUser={editUpdateUser}/>
           </div>
         </div>
 
