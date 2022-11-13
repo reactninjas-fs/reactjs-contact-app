@@ -2,6 +2,7 @@ import "./App.css";
 import ContactForm from "./contactForm/ContactForm";
 import {useState} from 'react'
 import { AddUser } from "./firebase/firebasefunction";
+import ContactList from "./contactList/ContactList";
 
 const initialValues = {username:"", phoneNumber:"", gender:""}
 
@@ -28,12 +29,7 @@ function App() {
         <div className="col-md-6 mb-2">
           <div className="h-100 p-5 bg-light border rounded-3">
             <h2>Contact List</h2>
-            <p>
-              
-            </p>
-            <button className="btn btn-outline-secondary" type="button">
-              Example button
-            </button>
+            <ContactList />
           </div>
         </div>
 
