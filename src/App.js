@@ -1,5 +1,5 @@
 import "./App.css";
-import ContactForm from "./contactForm/ContactForm";
+import ContactForm from "./components/contactForm/ContactForm";
 import {useState} from 'react'
 import { AddUser, UpdateUser } from "./firebase/firebasefunction";
 import ContactList from "./components/contactList/ContactList";
@@ -23,10 +23,10 @@ function App() {
     setInfo({id, username, phoneNumber, gender})
   }
 
-  return (
+  return ( 
     <div className="App"> 
     <div className="container">
-      <div className="row align-items-md-stretch">
+      <div className="row align-items-md-stretch my-5">
 
         <div className="col-md-6 mb-3">
           <div className="h-100 p-5 text-bg-dark rounded-3">
@@ -44,7 +44,7 @@ function App() {
 
       </div>
       </div>
-    </div> 
+    </div>  
   );
 }
 

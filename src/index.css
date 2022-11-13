@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 .App {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    display: flex;
-    align-items: center;
     background: url("./assets/background.jpg");
+    min-height: 100vh;
     background-size: cover;
     background-position: center center;
-    width: 100%;
+    display: flex;
+    align-items: center;
 } 
 .App .text-bg-dark{
     background-color: #b7672ac4 !important;
@@ -55,4 +55,12 @@
 }
 .App .list-group-item p {  
     font-size: 13px !important;
+}
+.App .edit {
+    cursor: pointer; 
+    font-size: 18px;
+}
+.App .delete {
+    cursor: pointer; 
+    font-size: 18px;
 }
