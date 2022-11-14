@@ -3,6 +3,7 @@ import ContactForm from "./components/contactForm/ContactForm";
 import {useState} from 'react'
 import { AddUser, UpdateUser } from "./firebase/firebasefunction";
 import ContactList from "./components/contactList/ContactList";
+import { ToastContainer } from "react-toastify";
 
 const initialValues = {username:"", phoneNumber:"", gender:""}
 
@@ -25,7 +26,7 @@ function App() {
 
   return ( 
     <div className="App"> 
-    <div className="container">
+    <div className="container mt-5">
       <div className="row align-items-md-stretch my-5">
 
         <div className="col-md-6 mb-3">
@@ -44,6 +45,7 @@ function App() {
 
       </div>
       </div>
+      <ToastContainer/>
     </div>  
   );
 }
