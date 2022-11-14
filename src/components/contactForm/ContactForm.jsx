@@ -13,18 +13,18 @@ const handleChange = (e) => {
     <form onSubmit={handleSubmit}>
     <div className="mb-3">
       <label htmlFor="username" className="form-label">Username</label>
-      <input onChange={handleChange} value={info.username} name="username" type="text" className="form-control" id="username" />
+      <input onChange={handleChange} value={info.username} name="username" type="text" className="form-control" id="username" required />
     </div>
     <div className="mb-3">
       <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
-      <input onChange={handleChange} value={info.phoneNumber} name="phoneNumber" type="text" className="form-control" id="phoneNumber" />
+      <input onChange={handleChange} value={info.phoneNumber} name="phoneNumber" type="text" className="form-control" id="phoneNumber" required/>
     </div>
     <div className="mb-3">
     <label htmlFor="phoneNumber" className="form-label">Gender</label>
-    <select onChange={handleChange} value={info.gender} name="gender" className="form-select"> 
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="other">Other</option>
+    <select onChange={handleChange} value={info.gender} name="gender" className="form-select" required> 
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Other">Other</option>
       </select>
     </div>  
     <button type="submit" className="btn btn btn-outline-light w-100 mt-3">Submit</button>

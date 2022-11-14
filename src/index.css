@@ -60,7 +60,13 @@
     cursor: pointer; 
     font-size: 18px;
 }
+.App .edit:hover {
+    color: #b7662a; 
+}
 .App .delete {
     cursor: pointer; 
     font-size: 18px;
+}
+.App .delete:hover {
+    color: #b7662a; 
 }

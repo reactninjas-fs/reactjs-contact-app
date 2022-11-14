@@ -6,7 +6,7 @@ Build a Contact App using ReactJS. This project maked as a team effort to unders
 - use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
 ## Use Technologies
-- Reactjs
+- ReactJS
 - JSX
 - CSS
 - Bootstrap
